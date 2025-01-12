@@ -60,7 +60,11 @@ export default function CatFactsPage() {
 
     return (
 
-        <Container className="d-flex flex-column justify-content-center align-items-center">
+        <Container className="d-flex flex-column justify-content-center align-items-center"
+                   style={{
+                       minHeight: 'calc(100vh - 60px)',
+                   }}
+        >
             <h2>Cat Facts</h2>
             {catFacts.map((fact, index) => {
                 const factNumber = (currentPage - 1) * factsPerPage + index + 1;
